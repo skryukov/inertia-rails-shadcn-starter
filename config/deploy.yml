@@ -2,12 +2,12 @@
 service: inertia_rails_shadcn_starter
 
 # Name of the container image.
-image: your-user/inertia_rails_shadcn_starter
+image: skryukov/inertia_rails_shadcn_starter
 
 # Deploy to these servers.
 servers:
   web:
-    - 192.168.0.1
+    - 204.48.24.117
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -19,14 +19,12 @@ servers:
 # Note: If using Cloudflare, set encryption mode in SSL/TLS setting to "Full" to enable CF-to-app encryption.
 proxy:
   ssl: true
-  host: app.example.com
+  host: inertia-shadcn.skryukov.dev
 
 # Credentials for your image host.
 registry:
-  # Specify the registry server, if you're not using Docker Hub
-  # server: registry.digitalocean.com / ghcr.io / ...
-  username: your-user
-
+  server: ghcr.io
+  username: skryukov
   # Always use an access token rather than real password when possible.
   password:
     - KAMAL_REGISTRY_PASSWORD
@@ -71,11 +69,15 @@ volumes:
 # Bridge fingerprinted assets, like JS and CSS, between versions to avoid
 # hitting 404 on in-flight requests. Combines all files from new and old
 # version inside the asset_path.
-asset_path: /rails/public/assets
+asset_path: /rails/public
 
 # Configure the image builder.
 builder:
   arch: amd64
+  cache:
+    type: registry
+    image: skryukov/inertia_rails_shadcn_starter-build-cache
+    options: mode=max
 
   # # Build image via remote server (useful for faster amd64 builds on arm64 computers)
   # remote: ssh://docker@docker-builder-server
