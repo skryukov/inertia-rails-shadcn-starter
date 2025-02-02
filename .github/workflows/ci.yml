@@ -6,6 +6,31 @@ on:
     branches: [ main ]
 
 jobs:
+
+  lint_js:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Check prettier formatting
+        run: npm run format
+
+      - name: Check for linting errors
+        run: npm run lint
+
+      - name: Check type errors
+        run: npm run check
+
   scan_ruby:
     runs-on: ubuntu-latest
 

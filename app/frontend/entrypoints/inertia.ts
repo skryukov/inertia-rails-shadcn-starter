@@ -1,14 +1,14 @@
-import { createInertiaApp } from '@inertiajs/react'
-import { createElement, ReactNode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createInertiaApp } from "@inertiajs/react"
+import { createElement, ReactNode } from "react"
+import { createRoot } from "react-dom/client"
 
 // Temporary type definition, until @inertiajs/react provides one
-type ResolvedComponent = {
+interface ResolvedComponent {
   default: ReactNode
   layout?: (page: ReactNode) => ReactNode
 }
 
-createInertiaApp({
+void createInertiaApp({
   // Set default page title
   // see https://inertia-rails.netlify.app/guide/title-and-meta
   //
@@ -20,7 +20,7 @@ createInertiaApp({
   // progress: false,
 
   resolve: (name) => {
-    const pages = import.meta.glob<ResolvedComponent>('../pages/**/*.tsx', {
+    const pages = import.meta.glob<ResolvedComponent>("../pages/**/*.tsx", {
       eager: true,
     })
     const page = pages[`../pages/${name}.tsx`]
@@ -42,8 +42,8 @@ createInertiaApp({
       createRoot(el).render(createElement(App, props))
     } else {
       console.error(
-        'Missing root element.\n\n' +
-          'If you see this error, it probably means you load Inertia.js on non-Inertia pages.\n' +
+        "Missing root element.\n\n" +
+          "If you see this error, it probably means you load Inertia.js on non-Inertia pages.\n" +
           'Consider moving <%= vite_typescript_tag "inertia" %> to the Inertia-specific layout instead.',
       )
     }
