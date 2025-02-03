@@ -14,4 +14,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "inertia_example#index"
+
+  inertia "login" => "Login"
 end

@@ -1,10 +1,11 @@
+import Layout from "@/components/layout.tsx"
 import { createInertiaApp } from "@inertiajs/react"
 import { createElement, ReactNode } from "react"
 import { createRoot } from "react-dom/client"
 
 // Temporary type definition, until @inertiajs/react provides one
 interface ResolvedComponent {
-  default: ReactNode
+  default: ReactNode & { layout?: (page: ReactNode) => ReactNode }
   layout?: (page: ReactNode) => ReactNode
 }
 
@@ -32,7 +33,7 @@ void createInertiaApp({
     // and use the following line.
     // see https://inertia-rails.netlify.app/guide/pages#default-layouts
     //
-    // page.default.layout ||= (page) => createElement(Layout, null, page)
+    page.default.layout ??= (page) => createElement(Layout, null, page)
 
     return page
   },

@@ -16,6 +16,9 @@
   },
   "dependencies": {
     "@inertiajs/react": "^2.0.3",
+    "@radix-ui/react-dropdown-menu": "^2.1.5",
+    "@radix-ui/react-label": "^2.1.1",
+    "@radix-ui/react-slot": "^1.1.1",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
