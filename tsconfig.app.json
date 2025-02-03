@@ -22,6 +22,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+
+    /* Aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./app/frontend/*"]
+    }
   },
   "include": ["app/frontend"]
 }
