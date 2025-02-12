@@ -133,6 +133,9 @@ GEM
     jbuilder (2.13.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    js-routes (2.3.4)
+      railties (>= 5)
+      sorbet-runtime
     json (2.10.1)
     kamal (2.5.2)
       activesupport (>= 7.0)
@@ -328,6 +331,7 @@ GEM
       fugit (~> 1.11.0)
       railties (>= 7.1)
       thor (~> 1.3.1)
+    sorbet-runtime (0.5.11820)
     sqlite3 (2.5.0-aarch64-linux-gnu)
     sqlite3 (2.5.0-aarch64-linux-musl)
     sqlite3 (2.5.0-arm-linux-gnu)
@@ -400,6 +404,7 @@ DEPENDENCIES
   factory_bot_rails
   inertia_rails (~> 3.6)
   jbuilder
+  js-routes
   kamal
   propshaft
   puma (>= 5.0)

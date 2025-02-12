@@ -7,6 +7,7 @@ import prettierConfig from 'eslint-config-prettier';
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {files: ["app/frontend/**/*.{js,mjs,cjs,ts,jsx,tsx}"]},
+  {ignores: ["app/frontend/routes/*"]},
   {
     settings: {
       react: {

@@ -12,3 +12,6 @@ require "rubocop/rake_task"
 RuboCop::RakeTask.new
 
 task default: %i[rubocop:autocorrect]
+
+# Update js-routes file before javascript build
+task "assets:precompile" => "js:routes"
