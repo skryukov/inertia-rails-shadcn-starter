@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Identity::PasswordResetsController < ApplicationController
+class Identity::PasswordResetsController < InertiaController
   skip_before_action :authenticate
 
   before_action :set_user, only: %i[ edit update ]
@@ -9,6 +9,7 @@ class Identity::PasswordResetsController < ApplicationController
   end
 
   def edit
+    render inertia: {email: @user.email, sid: params[:sid]}
   end
 
   def create
@@ -24,7 +25,7 @@ class Identity::PasswordResetsController < ApplicationController
     if @user.update(user_params)
       redirect_to sign_in_path, notice: "Your password was reset successfully. Please sign in"
     else
-      render :edit, status: :unprocessable_entity
+      redirect_to edit_identity_password_reset_path(sid: params[:sid]), inertia: inertia_errors(@user)
     end
   end
 

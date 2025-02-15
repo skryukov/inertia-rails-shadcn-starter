@@ -7,7 +7,7 @@ import prettierConfig from 'eslint-config-prettier';
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {files: ["app/frontend/**/*.{js,mjs,cjs,ts,jsx,tsx}"]},
-  {ignores: ["app/frontend/routes/*"]},
+  {ignores: ["app/frontend/routes/*", "app/frontend/components/ui/**/*"]},
   {
     settings: {
       react: {
@@ -32,4 +32,9 @@ export default [
     ...tseslint.configs.disableTypeChecked,
     files: ['**/*.js'],
   },
+  {
+    rules: {
+      "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    }
+  }
 ];

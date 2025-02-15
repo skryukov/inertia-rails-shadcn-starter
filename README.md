@@ -1,24 +1,18 @@
-# README
+# Inertia Rails Starter Kit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A modern full-stack starter application with Rails backend and React frontend using Inertia.js based on the [Laravel Starter Kit](https://github.com/laravel/react-starter-kit).
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- [Inertia Rails](https://inertia-rails.dev) & [Vite Rails](https://vite-ruby.netlify.app) setup
+- [React](https://react.dev) frontend with TypeScript & [shadcn/ui](https://ui.shadcn.com) component library
+- User authentication system (based on [Authentication Zero](https://github.com/lazaronixon/authentication-zero))
+- [Kamal](https://kamal-deploy.org/) for deployment
 
-* System dependencies
+## Setup
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone this repository
+2. Setup dependencies & run the server:
+   ```bash
+   bin/setup
+   ```

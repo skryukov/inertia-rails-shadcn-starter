@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Identity::EmailVerificationsController < ApplicationController
+class Identity::EmailVerificationsController < InertiaController
   skip_before_action :authenticate, only: :show
 
   before_action :set_user, only: :show
@@ -12,7 +12,7 @@ class Identity::EmailVerificationsController < ApplicationController
 
   def create
     send_email_verification
-    redirect_to root_path, notice: "We sent a verification email to your email address"
+    redirect_back_or_to root_path, notice: "We sent a verification email to your email address"
   end
 
   private

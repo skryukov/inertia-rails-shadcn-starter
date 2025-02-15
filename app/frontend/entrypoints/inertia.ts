@@ -1,23 +1,22 @@
 import { createInertiaApp } from "@inertiajs/react"
-import { createElement, ReactNode } from "react"
+import { ReactNode, createElement } from "react"
 import { createRoot } from "react-dom/client"
 
+import { initializeTheme } from "@/hooks/use-appearance"
+
 // Temporary type definition, until @inertiajs/react provides one
-interface ResolvedComponent {
-  default: ReactNode
+type ResolvedComponent = {
+  default: ReactNode & { layout?: (page: ReactNode) => ReactNode }
   layout?: (page: ReactNode) => ReactNode
 }
+
+const appName = (import.meta.env.VITE_APP_NAME || "Rails") as string
 
 void createInertiaApp({
   // Set default page title
   // see https://inertia-rails.dev/guide/title-and-meta
   //
-  // title: title => title ? `${title} - App` : 'App',
-
-  // Disable progress bar
-  //
-  // see https://inertia-rails.dev/guide/progress-indicators
-  // progress: false,
+  title: (title) => `${title} - ${appName}`,
 
   resolve: (name) => {
     const pages = import.meta.glob<ResolvedComponent>("../pages/**/*.tsx", {
@@ -32,7 +31,7 @@ void createInertiaApp({
     // and use the following line.
     // see https://inertia-rails.dev/guide/pages#default-layouts
     //
-    // page.default.layout ||= (page) => createElement(Layout, null, page)
+    // page.default.layout ??= (page) => createElement(Layout, null, page)
 
     return page
   },
@@ -48,4 +47,11 @@ void createInertiaApp({
       )
     }
   },
+
+  progress: {
+    color: "#4B5563",
+  },
 })
+
+// This will set light / dark mode on load...
+initializeTheme()
