@@ -38,6 +38,11 @@ void createInertiaApp({
 
   setup({ el, App, props }) {
     if (el) {
+      // Uncomment the following to enable SSR hydration:
+      // if (el.hasChildNodes()) {
+      //   hydrateRoot(el, createElement(App, props))
+      //   return
+      // }
       createRoot(el).render(createElement(App, props))
     } else {
       console.error(

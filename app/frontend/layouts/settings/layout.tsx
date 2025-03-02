@@ -1,4 +1,4 @@
-import { Link } from "@inertiajs/react"
+import { Link, usePage } from "@inertiajs/react"
 import { type PropsWithChildren } from "react"
 
 import Heading from "@/components/heading"
@@ -43,7 +43,7 @@ const sidebarNavItems: NavItem[] = [
 ]
 
 export default function SettingsLayout({ children }: PropsWithChildren) {
-  const currentPath = window.location.pathname
+  const { url } = usePage()
 
   return (
     <div className="px-4 py-6">
@@ -62,7 +62,7 @@ export default function SettingsLayout({ children }: PropsWithChildren) {
                 variant="ghost"
                 asChild
                 className={cn("w-full justify-start", {
-                  "bg-muted": currentPath === item.url,
+                  "bg-muted": url === item.url,
                 })}
               >
                 <Link href={item.url} prefetch>
