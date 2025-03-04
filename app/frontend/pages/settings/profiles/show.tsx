@@ -26,7 +26,6 @@ export default function Profile() {
   const { data, setData, patch, errors, processing, recentlySuccessful } =
     useForm({
       name: auth.user.name,
-      email: auth.user.email,
     })
 
   const submit: FormEventHandler = (e) => {
