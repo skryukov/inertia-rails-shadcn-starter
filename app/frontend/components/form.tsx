@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 
 type FormDataType = Record<string, FormDataConvertible>
 
-type FormContextType<TForm extends FormDataType = FormDataType> = {
+interface FormContextType<TForm extends FormDataType = FormDataType> {
   form?: InertiaFormProps<TForm>
 }
 
@@ -45,10 +45,10 @@ function Form<TForm extends FormDataType = FormDataType>({
   )
 }
 
-type FormFieldContextType<
+interface FormFieldContextType<
   TForm extends FormDataType = FormDataType,
   TName extends keyof TForm = keyof TForm,
-> = {
+> {
   name: TName
 }
 
@@ -88,7 +88,7 @@ const FormField = <
   )
 }
 
-type FieldProps = {
+interface FieldProps {
   id: string
   name: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -150,7 +150,7 @@ const useFormField = () => {
   }
 }
 
-type FormItemContextValue = {
+interface FormItemContextValue {
   id: string
 }
 

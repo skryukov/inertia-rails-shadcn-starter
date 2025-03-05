@@ -4,7 +4,7 @@ import AppLogoIcon from "@/components/app-logo-icon.tsx"
 import { dashboardPath, signInPath } from "@/routes"
 import { Auth } from "@/types"
 
-type WelcomeParams = {
+interface WelcomeParams {
   auth: Auth
 }
 

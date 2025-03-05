@@ -4,7 +4,7 @@ import { type PropsWithChildren } from "react"
 import AppLogoIcon from "@/components/app-logo-icon"
 import { rootPath } from "@/routes"
 
-type AuthLayoutProps = {
+interface AuthLayoutProps {
   name?: string
   title?: string
   description?: string

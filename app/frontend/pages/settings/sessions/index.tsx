@@ -9,7 +9,7 @@ import SettingsLayout from "@/layouts/settings/layout"
 import { sessionPath, settingsSessionsPath } from "@/routes"
 import { type BreadcrumbItem, type SharedData } from "@/types"
 
-type Session = {
+interface Session {
   id: string
   user_agent: string
   ip_address: string

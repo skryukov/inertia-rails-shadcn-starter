@@ -4,7 +4,7 @@ import { ReactNode, createElement } from "react"
 import ReactDOMServer from "react-dom/server"
 
 // Temporary type definition, until @inertiajs/react provides one
-type ResolvedComponent = {
+interface ResolvedComponent {
   default: ReactNode & { layout?: (page: ReactNode) => ReactNode }
   layout?: (page: ReactNode) => ReactNode
 }

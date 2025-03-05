@@ -31,10 +31,5 @@ export default [
   {
     ...tseslint.configs.disableTypeChecked,
     files: ['**/*.js'],
-  },
-  {
-    rules: {
-      "@typescript-eslint/consistent-type-definitions": ["error", "type"],
-    }
   }
 ];

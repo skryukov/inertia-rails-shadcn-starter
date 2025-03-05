@@ -2,7 +2,7 @@ import { useState } from "react"
 
 import { SidebarProvider } from "@/components/ui/sidebar"
 
-type AppShellProps = {
+interface AppShellProps {
   children: React.ReactNode
   variant?: "header" | "sidebar"
 }

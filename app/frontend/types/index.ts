@@ -1,41 +1,41 @@
 import { LucideIcon } from "lucide-react"
 
-export type Auth = {
+export interface Auth {
   user: User
   session: {
     id: string
   }
 }
 
-export type BreadcrumbItem = {
+export interface BreadcrumbItem {
   title: string
   href: string
 }
 
-export type NavGroup = {
+export interface NavGroup {
   title: string
   items: NavItem[]
 }
 
-export type NavItem = {
+export interface NavItem {
   title: string
   url: string
   icon?: LucideIcon | null
   isActive?: boolean
 }
 
-export type Flash = {
+export interface Flash {
   alert?: string
   notice?: string
 }
 
-export type SharedData = {
+export interface SharedData {
   auth: Auth
   flash: Flash
   [key: string]: unknown
 }
 
-export type User = {
+export interface User {
   id: number
   name: string
   email: string

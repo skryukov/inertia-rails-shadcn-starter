@@ -1,6 +1,6 @@
 import { useId } from "react"
 
-type PlaceholderPatternProps = {
+interface PlaceholderPatternProps {
   className?: string
 }
 

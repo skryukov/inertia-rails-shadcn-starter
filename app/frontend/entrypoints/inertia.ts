@@ -5,7 +5,7 @@ import { createRoot } from "react-dom/client"
 import { initializeTheme } from "@/hooks/use-appearance"
 
 // Temporary type definition, until @inertiajs/react provides one
-type ResolvedComponent = {
+interface ResolvedComponent {
   default: ReactNode & { layout?: (page: ReactNode) => ReactNode }
   layout?: (page: ReactNode) => ReactNode
 }
