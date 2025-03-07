@@ -1,6 +1,6 @@
 import { Transition } from "@headlessui/react"
 import { Head, Link, useForm, usePage } from "@inertiajs/react"
-import { FormEventHandler, useRef } from "react"
+import { type FormEventHandler, useRef } from "react"
 
 import HeadingSmall from "@/components/heading-small"
 import InputError from "@/components/input-error"
@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label"
 import AppLayout from "@/layouts/app-layout"
 import SettingsLayout from "@/layouts/settings/layout"
 import { identityEmailVerificationPath, settingsEmailPath } from "@/routes"
-import { type BreadcrumbItem, type SharedData } from "@/types"
+import type { BreadcrumbItem, SharedData } from "@/types"
 
 const breadcrumbs: BreadcrumbItem[] = [
   {

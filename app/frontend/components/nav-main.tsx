@@ -7,7 +7,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { type NavItem } from "@/types"
+import type { NavItem } from "@/types"
 
 export function NavMain({ items = [] }: { items: NavItem[] }) {
   const page = usePage()

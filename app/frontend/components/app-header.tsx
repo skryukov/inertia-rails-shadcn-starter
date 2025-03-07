@@ -33,7 +33,7 @@ import { UserMenuContent } from "@/components/user-menu-content"
 import { useInitials } from "@/hooks/use-initials"
 import { cn } from "@/lib/utils"
 import { rootPath } from "@/routes"
-import { type BreadcrumbItem, type NavItem, type SharedData } from "@/types"
+import type { BreadcrumbItem, NavItem, SharedData } from "@/types"
 
 import AppLogo from "./app-logo"
 import AppLogoIcon from "./app-logo-icon"

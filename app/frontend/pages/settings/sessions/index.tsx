@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import AppLayout from "@/layouts/app-layout"
 import SettingsLayout from "@/layouts/settings/layout"
 import { sessionPath, settingsSessionsPath } from "@/routes"
-import { type BreadcrumbItem, type SharedData } from "@/types"
+import type { BreadcrumbItem, SharedData } from "@/types"
 
 interface Session {
   id: string

@@ -1,9 +1,9 @@
-import { type ReactNode } from "react"
+import type { ReactNode } from "react"
 
 import { Toaster } from "@/components/ui/sonner"
 import { useFlash } from "@/hooks/use-flash"
 import AppLayoutTemplate from "@/layouts/app/app-sidebar-layout"
-import { type BreadcrumbItem } from "@/types"
+import type { BreadcrumbItem } from "@/types"
 
 interface AppLayoutProps {
   children: ReactNode

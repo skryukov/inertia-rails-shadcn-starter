@@ -1,5 +1,5 @@
 import { createInertiaApp } from "@inertiajs/react"
-import { ReactNode, createElement } from "react"
+import { type ReactNode, createElement } from "react"
 import { createRoot } from "react-dom/client"
 
 import { initializeTheme } from "@/hooks/use-appearance"

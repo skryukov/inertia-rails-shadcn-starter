@@ -3,7 +3,7 @@ import { Head } from "@inertiajs/react"
 import { PlaceholderPattern } from "@/components/placeholder-pattern"
 import AppLayout from "@/layouts/app-layout"
 import { dashboardPath } from "@/routes"
-import { type BreadcrumbItem } from "@/types"
+import type { BreadcrumbItem } from "@/types"
 
 const breadcrumbs: BreadcrumbItem[] = [
   {

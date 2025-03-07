@@ -10,7 +10,7 @@ import {
 import { UserInfo } from "@/components/user-info"
 import { useMobileNavigation } from "@/hooks/use-mobile-navigation"
 import { sessionPath, settingsProfilePath } from "@/routes"
-import { type User } from "@/types"
+import type { User } from "@/types"
 
 interface UserMenuContentProps {
   auth: {

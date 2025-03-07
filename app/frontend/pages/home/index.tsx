@@ -2,7 +2,7 @@ import { Head, Link } from "@inertiajs/react"
 
 import AppLogoIcon from "@/components/app-logo-icon.tsx"
 import { dashboardPath, signInPath } from "@/routes"
-import { Auth } from "@/types"
+import type { Auth } from "@/types"
 
 interface WelcomeParams {
   auth: Auth

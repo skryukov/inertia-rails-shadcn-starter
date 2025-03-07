@@ -1,6 +1,6 @@
 import { createInertiaApp } from "@inertiajs/react"
 import createServer from "@inertiajs/react/server"
-import { ReactNode, createElement } from "react"
+import { type ReactNode, createElement } from "react"
 import ReactDOMServer from "react-dom/server"
 
 // Temporary type definition, until @inertiajs/react provides one

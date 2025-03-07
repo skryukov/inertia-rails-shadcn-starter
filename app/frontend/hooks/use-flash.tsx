@@ -2,7 +2,7 @@ import { router, usePage } from "@inertiajs/react"
 import { useEffect, useState } from "react"
 import { toast } from "sonner"
 
-import { Flash } from "@/types"
+import type { Flash } from "@/types"
 
 const emptyFlash = {}
 

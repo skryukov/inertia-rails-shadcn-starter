@@ -1,7 +1,7 @@
-import { LucideIcon, Monitor, Moon, Sun } from "lucide-react"
-import { HTMLAttributes } from "react"
+import { type LucideIcon, Monitor, Moon, Sun } from "lucide-react"
+import type { HTMLAttributes } from "react"
 
-import { Appearance, useAppearance } from "@/hooks/use-appearance"
+import { type Appearance, useAppearance } from "@/hooks/use-appearance"
 import { cn } from "@/lib/utils"
 
 export default function AppearanceToggleTab({

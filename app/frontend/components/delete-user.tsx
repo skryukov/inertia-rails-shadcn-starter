@@ -1,5 +1,5 @@
 import { useForm } from "@inertiajs/react"
-import { FormEventHandler, useRef } from "react"
+import { type FormEventHandler, useRef } from "react"
 
 import HeadingSmall from "@/components/heading-small"
 import InputError from "@/components/input-error"

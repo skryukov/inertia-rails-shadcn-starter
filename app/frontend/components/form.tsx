@@ -1,6 +1,6 @@
-import { FormDataConvertible } from "@inertiajs/core"
-import { InertiaFormProps } from "@inertiajs/react"
-import * as LabelPrimitive from "@radix-ui/react-label"
+import type { FormDataConvertible } from "@inertiajs/core"
+import type { InertiaFormProps } from "@inertiajs/react"
+import type * as LabelPrimitive from "@radix-ui/react-label"
 import { Slot } from "@radix-ui/react-slot"
 import * as React from "react"
 

@@ -1,5 +1,5 @@
 import { Link, usePage } from "@inertiajs/react"
-import { type PropsWithChildren } from "react"
+import type { PropsWithChildren } from "react"
 
 import Heading from "@/components/heading"
 import { Button } from "@/components/ui/button"
@@ -12,7 +12,7 @@ import {
   settingsProfilePath,
   settingsSessionsPath,
 } from "@/routes"
-import { type NavItem } from "@/types"
+import type { NavItem } from "@/types"
 
 const sidebarNavItems: NavItem[] = [
   {
