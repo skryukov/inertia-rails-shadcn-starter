@@ -20,11 +20,15 @@ const breadcrumbs: BreadcrumbItem[] = [
   },
 ]
 
+interface ProfileForm {
+  name: string
+}
+
 export default function Profile() {
   const { auth } = usePage<SharedData>().props
 
   const { data, setData, patch, errors, processing, recentlySuccessful } =
-    useForm({
+    useForm<Required<ProfileForm>>({
       name: auth.user.name,
     })
 

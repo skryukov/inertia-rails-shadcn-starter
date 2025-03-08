@@ -19,7 +19,12 @@ const breadcrumbs: BreadcrumbItem[] = [
   },
 ]
 
-export default function Email({ status }: { status?: string }) {
+interface EmailForm {
+  password_challenge: string
+  email: string
+}
+
+export default function Email() {
   const currentPasswordInput = useRef<HTMLInputElement>(null)
 
   const { auth } = usePage<SharedData>().props
@@ -31,7 +36,7 @@ export default function Email({ status }: { status?: string }) {
     reset,
     processing,
     recentlySuccessful,
-  } = useForm({
+  } = useForm<Required<EmailForm>>({
     password_challenge: "",
     email: auth.user.email,
   })
@@ -93,12 +98,6 @@ export default function Email({ status }: { status?: string }) {
                     Click here to resend the verification email.
                   </Link>
                 </p>
-
-                {status === "verification-link-sent" && (
-                  <div className="mt-2 text-sm font-medium text-green-600">
-                    A new verification link has been sent to your email address.
-                  </div>
-                )}
               </div>
             )}
 

@@ -17,6 +17,10 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { usersPath } from "@/routes"
 
+interface DeleteUserForm {
+  password_challenge: string
+}
+
 export default function DeleteUser() {
   const passwordInput = useRef<HTMLInputElement>(null)
   const {
@@ -27,7 +31,7 @@ export default function DeleteUser() {
     reset,
     errors,
     clearErrors,
-  } = useForm({ password_challenge: "" })
+  } = useForm<Required<DeleteUserForm>>({ password_challenge: "" })
 
   const deleteUser: FormEventHandler = (e) => {
     e.preventDefault()

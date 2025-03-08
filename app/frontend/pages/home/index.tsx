@@ -1,14 +1,13 @@
-import { Head, Link } from "@inertiajs/react"
+import { Head, Link, usePage } from "@inertiajs/react"
 
 import AppLogoIcon from "@/components/app-logo-icon.tsx"
 import { dashboardPath, signInPath } from "@/routes"
-import type { Auth } from "@/types"
+import type { SharedData } from "@/types"
 
-interface WelcomeParams {
-  auth: Auth
-}
+export default function Welcome() {
+  const page = usePage<SharedData>()
+  const { auth } = page.props
 
-export default function Welcome({ auth }: WelcomeParams) {
   return (
     <>
       <Head title="Welcome">

@@ -1,5 +1,4 @@
-import { Transition } from "@headlessui/react"
-import { Head, Link, useForm, usePage } from "@inertiajs/react"
+import { Head, Link, usePage } from "@inertiajs/react"
 
 import HeadingSmall from "@/components/heading-small"
 import { Badge } from "@/components/ui/badge"
@@ -7,14 +6,7 @@ import { Button } from "@/components/ui/button"
 import AppLayout from "@/layouts/app-layout"
 import SettingsLayout from "@/layouts/settings/layout"
 import { sessionPath, settingsSessionsPath } from "@/routes"
-import type { BreadcrumbItem, SharedData } from "@/types"
-
-interface Session {
-  id: string
-  user_agent: string
-  ip_address: string
-  created_at: string
-}
+import type { BreadcrumbItem, Session, SharedData } from "@/types"
 
 const breadcrumbs: BreadcrumbItem[] = [
   {
@@ -23,8 +15,11 @@ const breadcrumbs: BreadcrumbItem[] = [
   },
 ]
 
-export default function Sessions({ sessions }: { sessions: Session[] }) {
-  const { recentlySuccessful } = useForm()
+interface SessionsProps {
+  sessions: Session[]
+}
+
+export default function Sessions({ sessions }: SessionsProps) {
   const { auth } = usePage<SharedData>().props
 
   return (
@@ -77,16 +72,6 @@ export default function Sessions({ sessions }: { sessions: Session[] }) {
               </div>
             ))}
           </div>
-
-          <Transition
-            show={recentlySuccessful}
-            enter="transition ease-in-out"
-            enterFrom="opacity-0"
-            leave="transition ease-in-out"
-            leaveTo="opacity-0"
-          >
-            <p className="text-sm text-neutral-600">Session terminated</p>
-          </Transition>
         </div>
       </SettingsLayout>
     </AppLayout>

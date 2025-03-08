@@ -2,19 +2,12 @@ import type { LucideIcon } from "lucide-react"
 
 export interface Auth {
   user: User
-  session: {
-    id: string
-  }
+  session: Pick<Session, "id">
 }
 
 export interface BreadcrumbItem {
   title: string
   href: string
-}
-
-export interface NavGroup {
-  title: string
-  items: NavItem[]
 }
 
 export interface NavItem {
@@ -44,4 +37,11 @@ export interface User {
   created_at: string
   updated_at: string
   [key: string]: unknown // This allows for additional properties...
+}
+
+export interface Session {
+  id: string
+  user_agent: string
+  ip_address: string
+  created_at: string
 }

@@ -19,12 +19,18 @@ const breadcrumbs: BreadcrumbItem[] = [
   },
 ]
 
+interface PasswordForm {
+  password_challenge: string
+  password: string
+  password_confirmation: string
+}
+
 export default function Password() {
   const passwordInput = useRef<HTMLInputElement>(null)
   const currentPasswordInput = useRef<HTMLInputElement>(null)
 
   const { data, setData, errors, put, reset, processing, recentlySuccessful } =
-    useForm({
+    useForm<Required<PasswordForm>>({
       password_challenge: "",
       password: "",
       password_confirmation: "",

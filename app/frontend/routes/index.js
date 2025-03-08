@@ -9,7 +9,7 @@ const __jsr = (
 () => {
     const hasProp = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
     let NodeTypes;
-    ((NodeTypes) => {
+    (function (NodeTypes) {
         NodeTypes[NodeTypes["GROUP"] = 1] = "GROUP";
         NodeTypes[NodeTypes["CAT"] = 2] = "CAT";
         NodeTypes[NodeTypes["SYMBOL"] = 3] = "SYMBOL";
@@ -42,7 +42,9 @@ const __jsr = (
         AMD: {
             define(routes) {
                 if (define) {
-                    define([], () => routes);
+                    define([], function () {
+                        return routes;
+                    });
                 }
             },
             isSupported() {

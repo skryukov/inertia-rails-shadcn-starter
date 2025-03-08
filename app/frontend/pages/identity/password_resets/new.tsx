@@ -10,8 +10,14 @@ import { Label } from "@/components/ui/label"
 import AuthLayout from "@/layouts/auth-layout"
 import { identityPasswordResetPath, signInPath } from "@/routes"
 
-export default function ForgotPassword({ status }: { status?: string }) {
-  const { data, setData, post, processing, errors } = useForm({
+interface ForgotPasswordForm {
+  email: string
+}
+
+export default function ForgotPassword() {
+  const { data, setData, post, processing, errors } = useForm<
+    Required<ForgotPasswordForm>
+  >({
     email: "",
   })
 
@@ -27,12 +33,6 @@ export default function ForgotPassword({ status }: { status?: string }) {
       description="Enter your email to receive a password reset link"
     >
       <Head title="Forgot password" />
-
-      {status && (
-        <div className="mb-4 text-center text-sm font-medium text-green-600">
-          {status}
-        </div>
-      )}
 
       <div className="space-y-6">
         <form onSubmit={submit}>
