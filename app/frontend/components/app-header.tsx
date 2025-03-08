@@ -32,7 +32,7 @@ import {
 import { UserMenuContent } from "@/components/user-menu-content"
 import { useInitials } from "@/hooks/use-initials"
 import { cn } from "@/lib/utils"
-import { rootPath } from "@/routes"
+import { dashboardPath } from "@/routes"
 import type { BreadcrumbItem, NavItem, SharedData } from "@/types"
 
 import AppLogo from "./app-logo"
@@ -41,7 +41,7 @@ import AppLogoIcon from "./app-logo-icon"
 const mainNavItems: NavItem[] = [
   {
     title: "Dashboard",
-    url: rootPath(),
+    url: dashboardPath(),
     icon: LayoutGrid,
   },
 ]
@@ -49,12 +49,12 @@ const mainNavItems: NavItem[] = [
 const rightNavItems: NavItem[] = [
   {
     title: "Repository",
-    url: "https://github.com/laravel/react-starter-kit",
+    url: "https://github.com/skryukov/inertia-rails-shadcn-starter",
     icon: Folder,
   },
   {
     title: "Documentation",
-    url: "https://laravel.com/docs/starter-kits",
+    url: "https://inertia-rails.dev",
     icon: BookOpen,
   },
 ]
@@ -134,7 +134,7 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
           </div>
 
           <Link
-            href="/dashboard"
+            href={dashboardPath()}
             prefetch
             className="flex items-center space-x-2"
           >
