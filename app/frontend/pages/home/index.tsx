@@ -1,6 +1,6 @@
 import { Head, Link, usePage } from "@inertiajs/react"
 
-import AppLogoIcon from "@/components/app-logo-icon.tsx"
+import AppLogoIcon from "@/components/app-logo-icon"
 import { dashboardPath, signInPath } from "@/routes"
 import type { SharedData } from "@/types"
 

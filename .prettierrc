@@ -3,12 +3,7 @@
   "semi": false,
   "tabWidth": 2,
   "trailingComma": "all",
-  "importOrder": ["^@/(.*)$", "^[./]"],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true,
   "plugins": [
-    "prettier-plugin-organize-imports",
-    "prettier-plugin-tailwindcss",
-    "@trivago/prettier-plugin-sort-imports"
+    "prettier-plugin-tailwindcss"
   ]
 }
