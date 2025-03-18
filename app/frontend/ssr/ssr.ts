@@ -3,6 +3,8 @@ import createServer from "@inertiajs/react/server"
 import { type ReactNode, createElement } from "react"
 import ReactDOMServer from "react-dom/server"
 
+import PersistentLayout from "@/layouts/persistent-layout"
+
 // Temporary type definition, until @inertiajs/react provides one
 interface ResolvedComponent {
   default: ReactNode & { layout?: (page: ReactNode) => ReactNode }
@@ -28,7 +30,8 @@ createServer((page) =>
       // and use the following line.
       // see https://inertia-rails.dev/guide/pages#default-layouts
       //
-      // page.default.layout ??= (page) => createElement(Layout, null, page)
+      page.default.layout ??= (page) =>
+        createElement(PersistentLayout, null, page)
 
       return page
     },

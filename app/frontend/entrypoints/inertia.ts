@@ -3,6 +3,7 @@ import { type ReactNode, createElement } from "react"
 import { createRoot } from "react-dom/client"
 
 import { initializeTheme } from "@/hooks/use-appearance"
+import PersistentLayout from "@/layouts/persistent-layout"
 
 // Temporary type definition, until @inertiajs/react provides one
 interface ResolvedComponent {
@@ -30,7 +31,8 @@ void createInertiaApp({
     // and use the following line.
     // see https://inertia-rails.dev/guide/pages#default-layouts
     //
-    // page.default.layout ??= (page) => createElement(Layout, null, page)
+    page.default.layout ??= (page) =>
+      createElement(PersistentLayout, null, page)
 
     return page
   },
