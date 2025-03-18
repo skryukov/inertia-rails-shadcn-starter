@@ -17,27 +17,27 @@ import type { NavItem } from "@/types"
 const sidebarNavItems: NavItem[] = [
   {
     title: "Profile",
-    url: settingsProfilePath(),
+    href: settingsProfilePath(),
     icon: null,
   },
   {
     title: "Email",
-    url: settingsEmailPath(),
+    href: settingsEmailPath(),
     icon: null,
   },
   {
     title: "Password",
-    url: settingsPasswordPath(),
+    href: settingsPasswordPath(),
     icon: null,
   },
   {
     title: "Sessions",
-    url: settingsSessionsPath(),
+    href: settingsSessionsPath(),
     icon: null,
   },
   {
     title: "Appearance",
-    url: settingsAppearancePath(),
+    href: settingsAppearancePath(),
     icon: null,
   },
 ]
@@ -57,15 +57,15 @@ export default function SettingsLayout({ children }: PropsWithChildren) {
           <nav className="flex flex-col space-y-1 space-x-0">
             {sidebarNavItems.map((item) => (
               <Button
-                key={item.url}
+                key={item.href}
                 size="sm"
                 variant="ghost"
                 asChild
                 className={cn("w-full justify-start", {
-                  "bg-muted": url === item.url,
+                  "bg-muted": url === item.href,
                 })}
               >
-                <Link href={item.url} prefetch>
+                <Link href={item.href} prefetch>
                   {item.title}
                 </Link>
               </Button>

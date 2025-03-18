@@ -41,7 +41,7 @@ import AppLogoIcon from "./app-logo-icon"
 const mainNavItems: NavItem[] = [
   {
     title: "Dashboard",
-    url: dashboardPath(),
+    href: dashboardPath(),
     icon: LayoutGrid,
   },
 ]
@@ -49,12 +49,12 @@ const mainNavItems: NavItem[] = [
 const rightNavItems: NavItem[] = [
   {
     title: "Repository",
-    url: "https://github.com/skryukov/inertia-rails-shadcn-starter",
+    href: "https://github.com/skryukov/inertia-rails-shadcn-starter",
     icon: Folder,
   },
   {
     title: "Documentation",
-    url: "https://inertia-rails.dev",
+    href: "https://inertia-rails.dev",
     icon: BookOpen,
   },
 ]
@@ -100,7 +100,7 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
                       {mainNavItems.map((item) => (
                         <Link
                           key={item.title}
-                          href={item.url}
+                          href={item.href}
                           className="flex items-center space-x-2 font-medium"
                         >
                           {item.icon && (
@@ -115,7 +115,7 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
                       {rightNavItems.map((item) => (
                         <a
                           key={item.title}
-                          href={item.url}
+                          href={item.href}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center space-x-2 font-medium"
@@ -151,10 +151,10 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
                     className="relative flex h-full items-center"
                   >
                     <Link
-                      href={item.url}
+                      href={item.href}
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        page.url === item.url && activeItemStyles,
+                        page.url === item.href && activeItemStyles,
                         "h-9 cursor-pointer px-3",
                       )}
                     >
@@ -163,7 +163,7 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
                       )}
                       {item.title}
                     </Link>
-                    {page.url === item.url && (
+                    {page.url === item.href && (
                       <div className="absolute bottom-0 left-0 h-0.5 w-full translate-y-px bg-black dark:bg-white"></div>
                     )}
                   </NavigationMenuItem>
@@ -187,7 +187,7 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
                     <Tooltip>
                       <TooltipTrigger>
                         <a
-                          href={item.url}
+                          href={item.href}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="group text-accent-foreground ring-offset-background hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring ml-1 inline-flex h-9 w-9 items-center justify-center rounded-md bg-transparent p-0 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
