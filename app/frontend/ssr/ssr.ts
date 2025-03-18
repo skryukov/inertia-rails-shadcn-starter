@@ -6,10 +6,9 @@ import ReactDOMServer from "react-dom/server"
 // Temporary type definition, until @inertiajs/react provides one
 interface ResolvedComponent {
   default: ReactNode & { layout?: (page: ReactNode) => ReactNode }
-  layout?: (page: ReactNode) => ReactNode
 }
 
-const appName = (import.meta.env.VITE_APP_NAME || "Rails") as string
+const appName = (import.meta.env.VITE_APP_NAME ?? "Rails") as string
 
 createServer((page) =>
   createInertiaApp({

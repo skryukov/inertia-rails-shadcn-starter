@@ -3,4 +3,3 @@ build
 coverage
 
 app/frontend/routes
-app/frontend/components/ui
