@@ -29,5 +29,5 @@
       "@/*": ["./app/frontend/*"]
     }
   },
-  "include": ["app/frontend"]
+  "include": ["app/frontend/**/*"]
 }
