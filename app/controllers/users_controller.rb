@@ -29,7 +29,7 @@ class UsersController < InertiaController
       Current.session = nil
       redirect_to root_path, notice: "Your account has been deleted", inertia: {clear_history: true}
     else
-      redirect_to settings_profile_path, inertia: {errors: {password_challenge: ["Password challenge is invalid"]}}
+      redirect_to settings_profile_path, inertia: {errors: {password_challenge: "Password challenge is invalid"}}
     end
   end
 
