@@ -44,11 +44,13 @@ export default [
             },
           ],
           "newlines-between": "always",
+          "named": true,
           alphabetize: { order: "asc" },
         },
       ],
       "import/first": "error",
       "import/extensions": ["error", "never"],
+      "@typescript-eslint/consistent-type-imports": "error",
     },
   },
   {
