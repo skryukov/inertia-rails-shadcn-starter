@@ -125,7 +125,7 @@ GEM
       activesupport (>= 6.1)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
-    inertia_rails (3.7.1)
+    inertia_rails (3.8.0)
       railties (>= 6)
     io-console (0.8.0)
     irb (1.15.2)
@@ -224,7 +224,7 @@ GEM
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
-    rack (3.1.12)
+    rack (3.1.13)
     rack-proxy (0.7.7)
       rack
     rack-session (2.1.0)
@@ -412,7 +412,7 @@ DEPENDENCIES
   capybara
   debug
   factory_bot_rails
-  inertia_rails (~> 3.6)
+  inertia_rails (~> 3.8)
   jbuilder
   js-routes
   kamal
