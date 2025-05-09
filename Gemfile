@@ -60,7 +60,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   # RSpec for Rails 7+
-  gem "rspec-rails", "~> 7.1"
+  gem "rspec-rails", "~> 8.0"
 
   # Fixtures replacement with a straightforward definition syntax
   gem "factory_bot_rails"
