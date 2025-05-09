@@ -7,11 +7,12 @@ require_relative "config/application"
 
 Rails.application.load_tasks
 
-require "rubocop/rake_task"
+if defined?(RuboCop)
+  require "rubocop/rake_task"
+  RuboCop::RakeTask.new
 
-RuboCop::RakeTask.new
-
-task default: %i[rubocop:autocorrect]
+  task default: %i[rubocop:autocorrect]
+end
 
 # Update js-routes file before javascript build
 task "assets:precompile" => "js:routes"
