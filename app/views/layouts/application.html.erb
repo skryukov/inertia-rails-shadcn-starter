@@ -26,10 +26,12 @@
       );
     </script>
 
-    <%= vite_stylesheet_tag "application" %>
-    <%= vite_react_refresh_tag %>
-    <%= vite_client_tag %>
-    <%= vite_typescript_tag "inertia" %>
+    <% unless Rails.env.test? %>
+      <%= vite_stylesheet_tag "application" %>
+      <%= vite_react_refresh_tag %>
+      <%= vite_client_tag %>
+      <%= vite_typescript_tag "inertia" %>
+    <% end %>
     <%= inertia_ssr_head %>
   </head>
 
