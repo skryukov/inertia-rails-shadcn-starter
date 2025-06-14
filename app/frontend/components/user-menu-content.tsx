@@ -1,4 +1,4 @@
-import { Link } from "@inertiajs/react"
+import { Link, router } from "@inertiajs/react"
 import { LogOut, Settings } from "lucide-react"
 
 import {
@@ -24,6 +24,11 @@ interface UserMenuContentProps {
 export function UserMenuContent({ auth }: UserMenuContentProps) {
   const { session, user } = auth
   const cleanup = useMobileNavigation()
+
+  const handleLogout = () => {
+    cleanup()
+    router.flushAll()
+  }
 
   return (
     <>
@@ -54,7 +59,7 @@ export function UserMenuContent({ auth }: UserMenuContentProps) {
           method="delete"
           href={sessionPath({ id: session.id })}
           as="button"
-          onClick={cleanup}
+          onClick={handleLogout}
         >
           <LogOut className="mr-2" />
           Log out
