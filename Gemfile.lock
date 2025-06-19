@@ -140,7 +140,7 @@ GEM
       railties (>= 5)
       sorbet-runtime
     json (2.12.2)
-    kamal (2.6.1)
+    kamal (2.7.0)
       activesupport (>= 7.0)
       base64 (~> 0.2)
       bcrypt_pbkdf (~> 1.0)
@@ -203,7 +203,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.8-x86_64-linux-musl)
       racc (~> 1.4)
-    ostruct (0.6.1)
+    ostruct (0.6.2)
     parallel (1.27.0)
     parser (3.3.8.0)
       ast (~> 2.4.1)
