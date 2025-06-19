@@ -126,7 +126,7 @@ GEM
       activesupport (>= 6.1)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
-    inertia_rails (3.8.0)
+    inertia_rails (3.9.0)
       railties (>= 6)
     io-console (0.8.0)
     irb (1.15.2)
@@ -266,7 +266,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.0)
-    rdoc (6.14.0)
+    rdoc (6.14.1)
       erb
       psych (>= 4.0.0)
     regexp_parser (2.10.0)
@@ -414,7 +414,7 @@ DEPENDENCIES
   capybara
   debug
   factory_bot_rails
-  inertia_rails (~> 3.6)
+  inertia_rails (~> 3.9)
   jbuilder
   js-routes
   kamal
