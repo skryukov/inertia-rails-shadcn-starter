@@ -5,10 +5,6 @@ class SessionsController < InertiaController
   before_action :require_no_authentication, only: %i[ new create ]
   before_action :set_session, only: :destroy
 
-  def index
-    @sessions = Current.user.sessions.order(created_at: :desc)
-  end
-
   def new
   end
 
