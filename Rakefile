@@ -7,7 +7,7 @@ require_relative "config/application"
 
 Rails.application.load_tasks
 
-if defined?(RuboCop)
+if Rails.env.local?
   require "rubocop/rake_task"
   RuboCop::RakeTask.new
 
