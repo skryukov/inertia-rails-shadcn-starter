@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
-    "@eslint/js": "^9.39.5",
+    "@eslint/js": "^10.0.1",
     "@inertiajs/core": "^3.6.1",
     "@inertiajs/vite": "^3.6.1",
     "@rolldown/plugin-babel": "^0.2.3",
