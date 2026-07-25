@@ -42,7 +42,7 @@
     "lucide-react": "^1.26.0",
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "^0.8.1",
-    "radix-ui": "^1.6.5",
+    "radix-ui": "^1.6.7",
     "rails-vite-plugin": "^0.2.5",
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.3.3",
